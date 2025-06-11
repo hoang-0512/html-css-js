@@ -1,0 +1,100 @@
+body {
+    background: ghostwhite;
+    color: dimgray;
+    font-family: serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#container {
+    margin: 5% auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box {
+    display: inline-flex;  /* Flexbox used for centering */
+    justify-content: center;  /* Centering the content horizontally */
+    align-items: center;  /* Centering the content vertically */
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px;
+    background-color: white;
+}
+
+span {
+    font-size: 75px;
+    font-family: sans-serif;
+    text-align: center;
+    display: block;
+}
+
+.top {
+    border-top: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.alert {
+    height: 75px;
+    width: 125px;
+    display: inline-block;
+    background: ghostwhite;
+    position: fixed;  /* Make it fixed so it stays centered */
+    left: 50%;  /* Center horizontally */
+    top: 50%;  /* Center vertically */
+    transform: translate(-50%, -50%);  /* Shift back by half width and height */
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px dimgray;
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+    padding: 30px;
+    text-align: center;
+}
+
+button {
+    background: dimgray;
+    border-radius: 2px;
+    color: ghostwhite;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:focus {
+    background: silver;
+}
+
+.activeBox {
+    background: silver;
+}
+
+@keyframes larger {
+    from {
+        height: 75px;
+        width: 125px;
+    }
+    to {
+        height: 100px;
+        width: 250px;
+    }
+}
